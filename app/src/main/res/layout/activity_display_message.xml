@@ -8,14 +8,12 @@
     tools:context="com.example.nikos.nfc.DisplayMessageActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="139dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="24dp"
+        android:id="@+id/text_view_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="ID"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="TextView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="31dp" />
 
 </android.support.constraint.ConstraintLayout>

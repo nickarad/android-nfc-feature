@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";// we need this to create a new intend
@@ -22,12 +21,10 @@ public class MainActivity extends AppCompatActivity {
     TextView textViewInfo, textViewTagInfo;
 
 //
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         textViewInfo = (TextView)findViewById(R.id.info);
 //        textViewTagInfo = (TextView)findViewById(R.id.taginfo);

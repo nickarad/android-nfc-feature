@@ -8,6 +8,8 @@
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="true" />
+    <!--Internet permissions for OkHttp-->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
