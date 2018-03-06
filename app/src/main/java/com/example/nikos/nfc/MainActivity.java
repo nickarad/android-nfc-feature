@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         textViewInfo = (TextView)findViewById(R.id.info);
 //        textViewTagInfo = (TextView)findViewById(R.id.taginfo);
 
