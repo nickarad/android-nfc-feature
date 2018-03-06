@@ -59,16 +59,16 @@ public class MainActivity extends AppCompatActivity {
             if(tag == null){
                 textViewInfo.setText("tag == null");
             }else{
-                String tagInfo = "\n";
+                String tagInfo="";
 
 //                tagInfo += "\nTag Id: \n";
                 byte[] tagId = tag.getId();
 //                tagInfo += "length = " + tagId.length +"\n";
             //----------Display Tag ID --------------------
                 for(int i=0; i<tagId.length; i++){
-                    tagInfo += Integer.toHexString(tagId[i] & 0xFF) + " ";
+                    tagInfo += Integer.toHexString(tagId[i] & 0xFF);
                 }
-                tagInfo += "\n";
+//                tagInfo += "\n";
 
                 textViewInfo.setText(tagInfo);
 

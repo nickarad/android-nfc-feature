@@ -4,9 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
+import android.util.Log;
 import android.widget.TextView;
 
 //Import OkHttp Libraries
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 
 import okhttp3.Call;
@@ -32,10 +36,11 @@ public class DisplayMessageActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
-        // Capture the layout's TextView and set the string as its text
-//        TextView textView = findViewById(R.id.textView);
-//        textView.setText(message);
 
+        // Capture the layout's TextView and set the string as its text
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(message);
+        Log.d("DisplayMessageActivity",message);
 //---------OkHttp-----------
         mTextViewResult = findViewById(R.id.text_view_result);
 
@@ -45,7 +50,22 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
 //--------------Java OkHttp------------------
         MediaType mediaType = MediaType.parse("application/json");
-        RequestBody body = RequestBody.create(mediaType, "{\n    \"userId\": \"abc1234\",\n    \"nfcId\": \"abc\",\n    \"accessToken\": \"fssflklkl32l53l\"\n}");
+
+//        RequestBody body = RequestBody.create(mediaType, "{\n    \"userId\": \"abc1234\",\n    \"nfcId\": \"1d 52 a6 a9\",\n    \"accessToken\": \"fssflklkl32l53l\"\n}");
+
+        JSONObject postdata = new JSONObject();
+        try {
+            postdata.put("userId", "abc1234");
+            postdata.put("nfcId", message); //1d 52 a6 a9
+            postdata.put("accessToken", "fssflklkl32l53l");
+        } catch (JSONException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        RequestBody body = RequestBody.create(mediaType,
+                postdata.toString());
+
         Request request = new Request.Builder()
                 .url("http://192.168.1.7:8080/access")
                 .post(body)
