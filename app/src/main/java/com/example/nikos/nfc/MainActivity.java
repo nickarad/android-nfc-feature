@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private NfcAdapter nfcAdapter;
     TextView textViewInfo, textViewTagInfo;
 
-
+//
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
