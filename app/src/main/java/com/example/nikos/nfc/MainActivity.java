@@ -8,11 +8,14 @@ import android.nfc.tech.MifareClassic;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";// we need this to create a new intend
 
 //    Declare instances of NFCAdapter an textview
     private NfcAdapter nfcAdapter;
@@ -91,5 +94,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    /** Called when the user taps the Send button */
+    public void sendMessage(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        TextView textViewInfo = (TextView)findViewById(R.id.info);
+        String message = textViewInfo.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
 
 }
