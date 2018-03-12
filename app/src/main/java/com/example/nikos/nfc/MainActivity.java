@@ -66,11 +66,11 @@ public class MainActivity extends AppCompatActivity {
 //                tagInfo += "length = " + tagId.length +"\n";
             //----------Display Tag ID --------------------
                 for(int i=0; i<tagId.length; i++){
-                    tagInfo += Integer.toHexString(tagId[i] & 0xFF);
+                    tagInfo += Integer.toHexString(tagId[i] & 0xff);
                 }
 //                tagInfo += "\n";
 
-                textViewInfo.setText(tagInfo);
+                textViewInfo.setText(tagInfo.toUpperCase()); // toUpperCase(): converts to capital letters
 
                 //Only android.nfc.tech.MifareClassic specified in nfc_tech_filter.xml,
                 //so must be MifareClassic
