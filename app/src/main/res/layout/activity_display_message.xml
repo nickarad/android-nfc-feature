@@ -8,20 +8,45 @@
     tools:context="com.example.nikos.nfc.DisplayMessageActivity">
 
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="251dp"
+        android:layout_height="33dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/lato"
+        android:padding="5dp"
+        android:text=" "
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato"
+        android:text="ID"
+        android:textAllCaps="false"
+        android:textColor="@color/FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/text_view_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="31dp" />
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="148dp"
+        android:text="             "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="       "
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="82dp" />
+
 
 </android.support.constraint.ConstraintLayout>

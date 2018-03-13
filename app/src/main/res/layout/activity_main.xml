@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato"
         android:text="UID"
-        android:textColor="@color/ic_launcher_background"
+        android:textColor="@color/FFFFFF"
         android:textSize="24sp" />
 
     <TextView
