@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,
                     "NFC NOT Enabled!",
                     Toast.LENGTH_LONG).show();
-            //finish(); 
+            //finish();
         }
     }
 
@@ -77,9 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 readMifareClassic(tag);
             }
         }else{
-            Toast.makeText(this,
-                    "onResume() : " + action,
-                    Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "onResume() : " + action, Toast.LENGTH_SHORT).show(); // On resume action
         }
     }
 
