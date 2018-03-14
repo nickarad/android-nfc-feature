@@ -1,4 +1,4 @@
-package com.example.nikos.nfc;
+package com.ehosp.android.nfc;
 
 import android.content.Intent;
 import android.nfc.NfcAdapter;

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nikos.nfc">
+    package="com.ehosp.android.nfc">
 
-    <!-- The NFC <uses-permission> element to access the NFC hardware: -->
-    <uses-permission android:name="android.permission.NFC" />
+    <!--FEATURES-->
     <!-- The uses-feature element so that your application shows up in Google Play only for devices that have NFC hardware: -->
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="true" />
+
+    <!--PERMISSIONS-->
+    <!-- The NFC <uses-permission> element to access the NFC hardware: -->
+    <uses-permission android:name="android.permission.NFC" />
     <!--Internet permissions for OkHttp-->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -18,7 +21,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.ehosp.android.nfc.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,7 +37,6 @@
                 android:name="android.nfc.action.TECH_DISCOVERED"
                 android:resource="@xml/techlist" />
 
-            <!-- .................................................................. -->
 
         </activity>
 
@@ -42,15 +44,13 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        //-----------New activity --------------
-        <activity android:name=".DisplayMessageActivity"
-            android:parentActivityName=".MainActivity">
+        <activity android:name="com.ehosp.android.nfc.DisplayMessageActivity"
+            android:parentActivityName="com.ehosp.android.nfc.MainActivity">
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.ehosp.android.nfc.MainActivity" />
         </activity>
-        //-----------------------------------------
     </application>
 
 </manifest>

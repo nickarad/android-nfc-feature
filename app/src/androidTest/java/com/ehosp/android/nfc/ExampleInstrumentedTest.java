@@ -1,4 +1,4 @@
-package com.example.nikos.nfc;
+package com.ehosp.android.nfc;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.nikos.nfc", appContext.getPackageName());
+        assertEquals("com.ehosp.android.nfc", appContext.getPackageName());
     }
 }

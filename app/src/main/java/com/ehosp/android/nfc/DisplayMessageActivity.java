@@ -1,4 +1,4 @@
-package com.example.nikos.nfc;
+package com.ehosp.android.nfc;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
