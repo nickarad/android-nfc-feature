@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";// we need this to create a new intend
 
-//    Declare instances of NFCAdapter an textview
+//    Declare instances of NFCAdapter and textview
     private NfcAdapter nfcAdapter;
     TextView textViewInfo, textViewTagInfo;
 
@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,
                     "NFC NOT supported on this devices!",
                     Toast.LENGTH_LONG).show();
-            finish();
+//            finish(); With this function the app terminates
         }else if(!nfcAdapter.isEnabled()){
             Toast.makeText(this,
                     "NFC NOT Enabled!",
                     Toast.LENGTH_LONG).show();
-            finish();
+            //finish(); 
         }
     }
 
