@@ -2,10 +2,42 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_color"
     tools:context="com.example.nikos.nfc.DisplayMessageActivity">
+
+    <TextView
+        android:id="@+id/dateView"
+        android:layout_width="190dp"
+        android:layout_height="27dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="152dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/lato"
+        android:padding="5dp"
+        android:text=" "
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="59dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="112dp"
+        android:fontFamily="@font/lato"
+        android:text="Date"
+        android:textAllCaps="false"
+        android:textColor="@color/FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -41,12 +73,11 @@
         android:id="@+id/text_view_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="248dp"
         android:text="             "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </android.support.constraint.ConstraintLayout>

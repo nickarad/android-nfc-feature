@@ -21,6 +21,10 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
+// Import library for date
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class DisplayMessageActivity extends AppCompatActivity {
@@ -40,6 +44,18 @@ public class DisplayMessageActivity extends AppCompatActivity {
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.textView);
         textView.setText(message);
+
+//        Display date
+
+        TextView dateTextView = findViewById(R.id.dateView);
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        String scanDate=dateFormat.format(date);
+
+        dateTextView.setText(scanDate);
+
+
         Log.d("DisplayMessageActivity",message);
 //---------OkHttp-----------
         mTextViewResult = findViewById(R.id.text_view_result);
